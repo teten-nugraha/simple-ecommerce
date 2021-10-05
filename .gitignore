@@ -12,6 +12,14 @@ target/
 /order-service/!**/src/main/**/target/
 /order-service/!**/src/test/**/target/
 
+/warehouse-service-service/target/
+/warehouse-service/.idea
+/warehouse-service/.mvn/**
+/warehouse-service/mvnw
+/warehouse-service/mvnw.cmd
+/warehouse-service/!**/src/main/**/target/
+/warehouse-service/!**/src/test/**/target/
+
 ### STS ###
 .apt_generated
 .classpath
