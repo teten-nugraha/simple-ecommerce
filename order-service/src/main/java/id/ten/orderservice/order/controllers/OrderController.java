@@ -32,8 +32,9 @@ public class OrderController {
         log.info("Initiate order request from customer {}", request.getCustomerId());
 
         return orderService.create(request.toOrder())
-            .map(Order::getId)
-            .map(CreateOrderResponse::new);
+                .doOnNext(orderService::reserveStock)
+                .map(Order::getId)
+                .map(CreateOrderResponse::new);
     }
 
 }
