@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  oder-service-db:
+    image: mongo:latest
+    container_name: oder-service-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=oder-service-admin
+      - MONGO_INITDB_ROOT_PASSWORD=123order
+    volumes:
+      - mongodb_data_container_order_service:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  mongodb_data_container_order_service:
